@@ -150,11 +150,12 @@ button.green {
 main {
   margin-inline-start: 15%;
   margin-inline-end: 15%;
-  position: relative;
+  /* position: relative; */
 }
 
 .main-flex {
   display: flex;
+  align-items: flex-start;
 }
 .sx {
   display: flex;
@@ -220,6 +221,6 @@ div.preview2 span {
   position: sticky;
   top: 84.8px;
   background-color: white;
-  z-index: 900;
+  z-index: 999;
   margin-top: 20px;
 }
