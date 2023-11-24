@@ -24,7 +24,7 @@
         <a href="#"><li>Write</li></a>
         <a href="#"><li>Sign in</li></a>
         <a href="#"
-          ><li><button>Get started</button></li></a
+          ><li><button class="getStartedBtn">Get started</button></li></a
         >
       </ul>
     </nav>
@@ -8065,9 +8065,22 @@
     </div>
 
     <script>
-              window.addEventListener("scroll", function()){
-      let scrollingNav = document.getElementsByClassName("breakpoint-btn")
-              }
+      window.addEventListener("scroll", function () {
+        let scrollingNav = document.querySelector("nav");
+        let breakpointBtn = document.querySelector(".breakpoint-btn");
+        let getStartedBtn = document.querySelector(".getStartedBtn");
+        // qua prendo la posizione del bottone breakpoint nel viewport:
+        let breakpointBtnPosition = breakpointBtn.getBoundingClientRect();
+        // faccio un if-else per aggiungere o togliere la classe per cambiare il colore del btn allo scroll
+        if (breakpointBtnPosition.top <= 0) {
+          //se il btn è al top o sopra il top del viewport {
+          scrollingNav.classList.add("scrolled");
+          getStartedBtn.classList.add("green");
+        } else {
+          scrollingNav.classList.remove("scrolled");
+          getStartedBtn.classList.remove("green"); // POTEVO USARE UN  TOGGLE?
+        }
+      });
     </script>
   </body>
 </html>
