@@ -150,6 +150,7 @@ button.green {
 main {
   margin-inline-start: 15%;
   margin-inline-end: 15%;
+  position: relative;
 }
 
 .main-flex {
@@ -162,12 +163,13 @@ main {
   width: 100%;
 }
 
-.sx.article {
+div.article {
   display: flex;
+  width: 100%;
 }
 
 div.article-img * {
-  width: 250px;
+  width: 200px;
 }
 
 div.article-text {
@@ -214,5 +216,10 @@ div.preview2 span {
   margin-block-end: 25px;
 }
 
-.container-left {
+.dx {
+  position: sticky;
+  top: 84.8px;
+  background-color: white;
+  z-index: 900;
+  margin-top: 20px;
 }
