@@ -8311,20 +8311,21 @@
         let scrollingNav = document.querySelector("nav");
         let breakpointBtn = document.querySelector(".breakpoint-btn");
         let getStartedBtn = document.querySelector(".getStartedBtn");
-        let discoverSection = document.querySelector(".discover"); //aggiunto per la sticky dx
-        let navHeight = 84.4;
+        // let discoverSection = document.querySelector(".discover"); //aggiunto per la sticky dx
+        // let navHeight = 84.4;
         // qua prendo la posizione del bottone breakpoint nel viewport (questo dovuto cercare su internet):
         let breakpointBtnPosition = breakpointBtn.getBoundingClientRect();
         // faccio un if-else per aggiungere o togliere la classe per cambiare il colore del btn allo scroll
-        if (breakpointBtnPosition.top - navHeight <= 0) {
+        if (breakpointBtnPosition.top <= 0) {
+          //- navHeight //
           //se il btn è al top o sopra il top del viewport {
           scrollingNav.classList.add("scrolled");
           getStartedBtn.classList.add("green");
-          discoverSection.style.marginTop = navHeight + "px";
+          // discoverSection.style.marginTop = navHeight + "px";
         } else {
           scrollingNav.classList.remove("scrolled");
           getStartedBtn.classList.remove("green");
-          discoverSection.style.marginTop = "0";
+          // discoverSection.style.marginTop = "0";
           // POTEVO USARE UN  TOGGLE?
         }
       });
